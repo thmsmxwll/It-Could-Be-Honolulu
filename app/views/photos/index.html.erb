@@ -1,0 +1,31 @@
+<h1>Listing photos</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Usage</th>
+    <th>Image</th>
+    <th>Tag list</th>
+    <th>Remote image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%= photo.title %></td>
+    <td><%= photo.usage %></td>
+    <td><%= photo.image %></td>
+    <td><%= photo.tag_list %></td>
+    <td><%= photo.remote_image_url %></td>
+    <td><%= link_to 'Show', photo %></td>
+    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+    <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Photo', new_photo_path %>

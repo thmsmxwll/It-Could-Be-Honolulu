@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <b>Usage:</b>
+  <%= @photo.usage %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @photo.image %>
+</p>
+
+<p>
+  <b>Tag list:</b>
+  <%= @photo.tag_list %>
+</p>
+
+<p>
+  <b>Remote image url:</b>
+  <%= @photo.remote_image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

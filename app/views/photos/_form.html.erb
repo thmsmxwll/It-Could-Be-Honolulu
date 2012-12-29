@@ -1,0 +1,9 @@
+<%= simple_form_for @photo do |f| %>
+  <%= f.input :title %>
+  <%= f.label 'Image must be high res (1500 x 1000)' %>
+  <%= f.file_field :image %>
+  <%= f.input :remote_image_url %>
+  <%= f.input :usage, :collection => Photo::USAGE %>
+  <%= f.input :tag_list, :placeholder => 'Editorial, Lifestyle, Travel', :label => 'Tags' %>
+  <%= f.button :submit %>
+<% end %>

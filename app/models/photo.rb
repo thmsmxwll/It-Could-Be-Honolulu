@@ -3,6 +3,9 @@ class Photo < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: [:slugged, :history]
 
+  # Carrierwave
+  mount_uploader :image, ImageUploader
+
   # Tags
   acts_as_taggable
 

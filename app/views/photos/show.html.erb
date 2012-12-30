@@ -12,7 +12,8 @@
 
 <p>
   <b>Image:</b>
-  <%= @photo.image %>
+  <%#= @photo.image %>
+  <%= image_tag @photo.image_url(:large).to_s %>
 </p>
 
 <p>

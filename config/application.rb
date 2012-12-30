@@ -9,8 +9,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# Comment out for Heroku deploy use config variables instead
-# ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+# Comment out for Heroku deploy using config variables instead
+ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
 
 module Icbh
   class Application < Rails::Application

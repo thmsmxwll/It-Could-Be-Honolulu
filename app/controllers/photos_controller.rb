@@ -1,11 +1,14 @@
 class PhotosController < ApplicationController
+  # Devise Admin authentication
+  before_filter :authenticate_admin!, :except => [:index, :show]
+
   # GET /photos
   # GET /photos.json
   def index
     if params[:tag]
       @photos = Photo.tagged_with(params[:tag])
     else
-      @photos = Photo.all
+      @photos = Photo.order("Created_at DESC")
     end
 
     respond_to do |format|

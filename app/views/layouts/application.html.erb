@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>It Could Be Honolulu | Photography</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= csrf_meta_tags %>
-  <!-- typekit -->
-  <!-- <script type="text/javascript" src="//use.typekit.net/yfd5ila.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+<!--
+   ___ _      ____            _     _   ____       
+  |_ _| |_   / ___|___  _   _| | __| | | __ )  ___ 
+   | || __| | |   / _ \| | | | |/ _` | |  _ \ / _ \
+   | || |_  | |__| (_) | |_| | | (_| | | |_) |  __/
+  |___|\__|  \____\___/ \__,_|_|\__,_| |____/ \___|
+                                                 
+   _   _                   _       _       
+  | | | | ___  _ __   ___ | |_   _| |_   _ 
+  | |_| |/ _ \| '_ \ / _ \| | | | | | | | |
+  |  _  | (_) | | | | (_) | | |_| | | |_| |
+  |_| |_|\___/|_| |_|\___/|_|\__,_|_|\__,_|
+                                         
+-->
+<meta charset="utf-8">
+<title>It Could Be Honolulu | Photography</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="It Could Be Honolulu exploring the world one photo at a time." />
+<meta name="keywords" content="It Could Be Honolulu, photography, lifestyle photography, fashion photography, editorial photography." />
+<meta name="dcterms.publisher" content="Built with love by Thomas Maxwell (https://twitter.com/ThomasMaxwell)" />
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= csrf_meta_tags %>
+<!-- typekit -->
+<script type="text/javascript" src="//use.typekit.net/yfd5ila.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 <!-- navigation -->
@@ -16,6 +35,7 @@
 
   <div class="row">
     <div class="span12">
+      <%= bootstrap_flash %>
       <!-- yield -->
       <%= yield %>
     </div><!--/.span12 -->

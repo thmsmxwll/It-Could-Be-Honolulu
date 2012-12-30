@@ -1,5 +1,5 @@
 body {
-  padding-top: 110px;
+  padding-top: 120px;
 }
 
 @import "twitter/bootstrap/bootstrap";
@@ -35,7 +35,8 @@ body {
 // Example:
 // @linkColor: #ff0000;
 
-// Highlight
+////////// Highlight ////////// 
+
 :-moz-selection {
   background: #ff9e9c;
   text-shadow: none;
@@ -46,7 +47,8 @@ body {
   text-shadow: none;
 }
 
-// Navigation
+////////// Navigation //////////
+
 @navbarHeight: 100px;
 @navbarBackground: white;
 @navbarBackgroundHighlight: white;
@@ -59,7 +61,8 @@ body {
   text-transform: uppercase; 
   font-style: normal; 
   font-variant: normal;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
+  font-size: 18px;
 }
 
 .brand &:hover {
@@ -71,9 +74,9 @@ body {
   font-weight: bold;
 }
 
-// Dropdowns
+////////// Dropdowns //////////
+
 @dropdownBackground: black;
-@dropdownBorder: rgba(0,0,0,0);
 @dropdownLinkColor: white;
 @dropdownLinkColorHover: #6c6c6c; 
 @dropdownLinkBackgroundHover: @linkColor;
@@ -101,7 +104,8 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
 }
 
-// Carousel
+////////// Carousel //////////
+
 .carousel img {
     margin: auto;
 }
@@ -121,7 +125,8 @@ body {
   bottom: 50%;
 }
 
-// Form styles
+////////// Form styles //////////
+
 .form {
   max-width: 300px;
   padding: 19px 29px 29px;
@@ -134,4 +139,51 @@ body {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
   box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+////////// Fonts ////////// 
+
+a {
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+p, ol, td, ul {
+  font-family: "chaparral-pro", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  color: #000;
+}
+
+h4 {
+  color: #000; 
+  font-family: "pill-gothic-300mg", proxima-nova, helvetica, arial, sans-serif; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: bold; 
+  letter-spacing: 3px; 
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #fff; 
+  font-family: "pill-gothic-300mg", proxima-nova, helvetica, arial, sans-serif; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: bold; 
+  letter-spacing: 14px; 
+  text-transform: uppercase;
+}
+
+////////// Image padding ////////// 
+
+.span8 {
+  padding-bottom: 20px;
 }

@@ -1,13 +1,15 @@
-<h1>Sign in</h1>
+<div class="form">
+  <h1>Sign in</h1>
 
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
+  <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
 
-  <%= f.input :email, :autofocus => true %>
+    <%= f.input :email, :autofocus => true %>
 
-  <%= f.input :password %>
+    <%= f.input :password %>
 
-  <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
 
-  <%= f.button :submit, 'Sign in', :class => 'btn' %>
+    <%= f.button :submit, 'Sign in', :class => 'btn' %>
 
-<% end %>
+  <% end %>
+</div>

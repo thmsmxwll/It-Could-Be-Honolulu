@@ -10,7 +10,7 @@ if defined?(Bundler)
 end
 
 # Comment out for Heroku deploy use config variables instead
-ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+# ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
 
 module Icbh
   class Application < Rails::Application

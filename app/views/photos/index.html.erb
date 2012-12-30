@@ -1,31 +1,10 @@
-<h1>Listing photos</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Usage</th>
-    <th>Image</th>
-    <th>Tag list</th>
-    <th>Remote image url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @photos.each do |photo| %>
-  <tr>
-    <td><%= photo.title %></td>
-    <td><%= photo.usage %></td>
-    <td><%= photo.image %></td>
-    <td><%= photo.tag_list %></td>
-    <td><%= photo.remote_image_url %></td>
-    <td><%= link_to 'Show', photo %></td>
-    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-    <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="row">
+  <div class="span8"><%= image_tag photo.image_url(:large).to_s %></div>
+  <div class="span4">
+    <h4><%= link_to photo.title, photo_path(photo) %></h4>
+    <hr>
+    <p><%= raw photo.tag_list.map { |t| link_to t, tag_path(t)}.join(' ') %></p>
+  </div>
+</div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Photo', new_photo_path %>

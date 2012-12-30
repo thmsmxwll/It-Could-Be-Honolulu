@@ -1,14 +1,15 @@
 Icbh::Application.routes.draw do
+
+  # Devise routes 
+  devise_for :admins, :skip => :registrations do
+    get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
+
   get "home/index"
 
   # Static pages
   match '/about', :to => 'home#about'
   match 'stimulus', :to => 'home#stimulus'
-
-  # Devise routes 
-  devise_for :admins, :skip => :registrations do
-    get'/admins/sign_out' => 'devise/sessions#destroy'
-  end
 
   # Tags
   get 'tags/:tag', to: 'photos#index', as: :tag

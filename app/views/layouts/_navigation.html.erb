@@ -1,0 +1,28 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">ICBH</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Photos", photos_path %></li>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Stimulus", stimulus_path %></li>
+          <li><a href="http://itcouldbehonolulu.tumblr.com/">Blog</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li>
+          <% if admin_signed_in? %>
+            <%= link_to('New Photo', new_photo_path, :class => 'pull-right') %>
+          <% end %>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+  </div><!--/.navbar-inner -->
+</header><!--/.header -->

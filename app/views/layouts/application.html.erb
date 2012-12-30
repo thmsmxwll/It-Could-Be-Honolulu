@@ -3,12 +3,33 @@
 <head>
   <title>It Could Be Honolulu | Photography</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- navigation -->
+<%= render 'layouts/navigation' %>
 
-<%= yield %>
+<div class="container">
+
+  <div class="row">
+    <div class="span12">
+      <!-- yield -->
+      <%= yield %>
+    </div><!--/.span12 -->
+  </div><!--/.row -->
+
+  <!-- footer -->
+  <%= render 'layouts/footer' %>
+
+</div><!--/.container -->
+
+<!-- javascripts -->
+<%= javascript_include_tag "application" %>
+<script type='text/javascript'>
+  jQuery('.backtotop').click(function(){
+    jQuery('html, body').animate({scrollTop:0}, 'slow');
+  });
+</script>
 
 </body>
 </html>

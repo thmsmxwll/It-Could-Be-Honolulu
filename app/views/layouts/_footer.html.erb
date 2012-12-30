@@ -1,0 +1,10 @@
+<hr>
+<footer>
+  <p>&copy; It Could Be Honolulu 2012 &middot <span class="pull-right"><a href="javascript:void(0)" class="backtotop">Up</a></span>
+  <% if admin_signed_in? %>
+    <%= link_to('Logout', destroy_admin_session_path) %>
+  <% else %>
+    <%= link_to('Login', new_admin_session_path) %>
+  <% end %>
+  </p>
+</footer>

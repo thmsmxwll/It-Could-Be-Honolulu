@@ -1,6 +1,6 @@
 It Could Be Honolulu
 ====================
-A simple photo portfolio website built on Rails.
+A simple [Twitter Bootstraped](http://twitter.github.com/bootstrap/) photo portfolio built on Rails.
 
 Installation
 ============
@@ -12,5 +12,37 @@ If you are new to Rails development, check out guides for getting your developme
     bundle install
     rake db:migrate
 
+Setup 'config/application.yml' with the [figaro](https://github.com/laserlemon/figaro) gem. 
+
+Install figaro:
+
+    rails g figaro:install
+
+This generates a commented 'config/application.yml' file and ignores it in your .'gitignore'.
+
+Add s3 credentials to 'config/application.yml': 
+
+    AWS_ACCESS_KEY_ID: "Key Id"
+    AWS_SECRET_ACCESS_KEY: "Secrect Access Key"
+
+You can also add your secret token 'config/initializers/secret_token.rb' to the 'config/application.yml' if required.
+
+Start the local server:
+
+    rails s
+
+Setup admin:
+
+    rails console
+
+    Admin.create! do |u|
+      u.email = 'sample@sample.com'
+      u.password = 'please'
+    end
+
+Login as admin: 
+
+    [localhost:3000/admins/sign_in](http://localhost:3000/admins/sign_in)
 
 
+    

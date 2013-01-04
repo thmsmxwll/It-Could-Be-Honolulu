@@ -1,6 +1,6 @@
 <% @photos.each do |photo| %>
 <div class="row">
-  <div class="span8"><%= image_tag photo.image_url(:large).to_s %></div>
+  <div class="span8"><%= image_tag photo.image_url.to_s %></div>
   <div class="span4">
     <h4><%= link_to photo.title, photo_path(photo) %></h4>
     <hr>

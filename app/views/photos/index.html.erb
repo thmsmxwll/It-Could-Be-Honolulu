@@ -1,10 +1,10 @@
 <% @photos.each do |photo| %>
 <div class="row">
-  <div class="span8"><%= image_tag photo.image_url(:large).to_s %></div>
-  <div class="span4">
-    <h4><%= link_to photo.title, photo_path(photo) %></h4>
+  <div class="span12 pagination-centered"><%= image_tag photo.image_url(:large).to_s %></div>
+  <!-- <div class="span4">
+    <h4><%#= link_to photo.title, photo_path(photo) %></h4>
     <hr>
-    <p><%= raw photo.tag_list.map { |t| link_to t, tag_path(t)}.join(' ') %></p>
-  </div>
+    <p><%#= raw photo.tag_list.map { |t| link_to t, tag_path(t)}.join(' ') %></p>
+  </div> -->
 </div>
 <% end %>

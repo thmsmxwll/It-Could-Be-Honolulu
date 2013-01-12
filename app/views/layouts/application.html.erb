@@ -53,6 +53,16 @@
     jQuery('html, body').animate({scrollTop:0}, 'slow');
   });
 </script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
 
+    $(".photo").mouseenter(function () {
+        $(this).find('.hover').fadeIn(300);
+    }).mouseleave(function (){ 
+      $(this).find('.hover').stop(true, true).fadeOut(300);
+    });
+
+  }); /* End Dom Ready */
+</script>
 </body>
 </html>

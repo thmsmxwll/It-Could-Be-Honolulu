@@ -47,7 +47,6 @@ Login as admin:
 To Do
 =====
 
-- refactor index page
 - move website specific information into the config file: meta, title, etc.
 - add kaminari gem with endless scroll
 

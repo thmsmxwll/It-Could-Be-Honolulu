@@ -18,7 +18,7 @@
 <meta charset="utf-8">
 <title>It Could Be Honolulu | Photography</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="It Could Be Honolulu exploring the world one photo at a time." />
+<meta name="description" content="GZ | Photographer" />
 <meta name="keywords" content="It Could Be Honolulu, photography, lifestyle photography, fashion photography, editorial photography." />
 <meta name="dcterms.publisher" content="Built with love by Thomas Maxwell (https://twitter.com/ThomasMaxwell)" />
 <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -49,20 +49,11 @@
 <!-- javascripts -->
 <%= javascript_include_tag "application" %>
 <script type='text/javascript'>
+
   jQuery('.backtotop').click(function(){
     jQuery('html, body').animate({scrollTop:0}, 'slow');
   });
-</script>
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
 
-    $(".photo").mouseenter(function () {
-        $(this).find('.hover').fadeIn(300);
-    }).mouseleave(function (){ 
-      $(this).find('.hover').stop(true, true).fadeOut(300);
-    });
-
-  }); /* End Dom Ready */
 </script>
 </body>
 </html>
